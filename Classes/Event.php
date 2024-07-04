@@ -44,6 +44,40 @@ class Event
         return $this->match;
     }
 
+
+    /**
+     * @param mixed $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @param mixed $minute
+     */
+    public function setMinute($minute)
+    {
+        $this->minute = $minute;
+    }
+
+    /**
+     * @param mixed $joueur
+     */
+    public function setJoueur($joueur)
+    {
+        $this->joueur = $joueur;
+    }
+
+    /**
+     * @param mixed $match
+     */
+    public function setMatch($match)
+    {
+        $this->match = $match;
+    }
+
+    
     public function getDetails()
     {
         echo "Le type d'event: $this->type, Minute: $this->minute, Joueur: $this->joueur, Match: $this->match";
