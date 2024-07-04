@@ -1,6 +1,6 @@
 <?php
 
-class Match
+class Match implements MatchDetails
 {
     private $equipe1, $equipe2, $date, $heure, $arbitre, $resultat;
 

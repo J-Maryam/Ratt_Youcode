@@ -77,7 +77,7 @@ class Event
         $this->match = $match;
     }
 
-    
+
     public function getDetails()
     {
         echo "Le type d'event: $this->type, Minute: $this->minute, Joueur: $this->joueur, Match: $this->match";
