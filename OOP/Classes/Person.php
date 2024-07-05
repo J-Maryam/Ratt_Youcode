@@ -1,5 +1,6 @@
 <?php
 
+namespace Classes;
 abstract class Person
 {
     protected $nom, $adresse, $tel;

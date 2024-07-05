@@ -1,5 +1,6 @@
 <?php
 
+namespace Classes;
 class Joueur
 {
     private $nom, $dateNaissance, $position, $equipe;
@@ -75,7 +76,7 @@ class Joueur
     {
         $this->equipe = $equipe;
     }
-    
+
     public function getDetails()
     {
         echo "Joueur: $this->nom, Date de naissance: $this->dateNaissance, Position: $this->position, Equipe: $this->equipe";

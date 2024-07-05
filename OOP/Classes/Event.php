@@ -1,5 +1,6 @@
 <?php
 
+namespace Classes;
 class Event
 {
     private $type, $minute, $joueur, $match;

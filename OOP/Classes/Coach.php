@@ -1,6 +1,8 @@
 <?php
 
-class Arbitre extends Person
+namespace Classes;
+
+class Coach extends Person
 {
     public function __construct($nom, $adresse, $tel)
     {
@@ -31,6 +33,7 @@ class Arbitre extends Person
         return $this->tel;
     }
 
+
     /**
      * @param mixed $nom
      */
@@ -55,9 +58,10 @@ class Arbitre extends Person
         $this->tel = $tel;
     }
 
+
     public function getDetails()
     {
-        echo "L'Arbitre: $this->nom, Adresse est: $this->adresse, Tel: $this->tel";
+        echo "Le Coach: $this->nom, son adresse est: $this->adresse, son tel: $this->tel";
     }
 
 }

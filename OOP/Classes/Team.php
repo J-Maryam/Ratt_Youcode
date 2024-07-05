@@ -1,5 +1,6 @@
 <?php
 
+namespace Classes;
 class Team
 {
     private $nom, $coach;
@@ -41,6 +42,12 @@ class Team
     public function setCoach($coach)
     {
         $this->coach = $coach;
+    }
+
+    public function ajouterEquipe($nom, $entraineur)
+    {
+        $team = new Team($nom, $entraineur);
+        $this->teams[] = $team;
     }
 
     public function getDetails()
