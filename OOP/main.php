@@ -32,6 +32,6 @@ $match->addEvent($event1);
 $match->addEvent($event2);
 
 // Afficher les détails du match
-//echo $match->getDetails();
+echo $match->getDetails();
 
 
