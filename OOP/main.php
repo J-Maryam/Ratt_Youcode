@@ -1,7 +1,10 @@
 <?php
 
+use Classes\Arbitre;
 use Classes\Coach;
+use Classes\Event;
 use Classes\Joueur;
+use Classes\Match;
 use Classes\Team;
 
 //Ajout de nouveaux coach
@@ -18,4 +21,17 @@ $team1->addPlayer($joueur1);
 
 $joueur2 = new Joueur("Joe Doe", "1990-01-01", "Attaquant", $team2);
 $team2->addPlayer($joueur2);
+
+$arbitre = new Arbitre("Alice Smith", "456 Elm St", "077-555-5678");
+$match = new Match($team1, $team2, "2024-07-03", "15:00", $arbitre);
+
+$event1 = new Event("But", 23, $joueur1, $match);
+$event2 = new Event("Carton Jaune", 15, $joueur2, $match);
+
+$match->addEvent($event1);
+$match->addEvent($event2);
+
+// Afficher les détails du match
+//echo $match->getDetails();
+
 

@@ -4,7 +4,7 @@ namespace Classes;
 
 class Match implements MatchDetails
 {
-    private $equipe1, $equipe2, $date, $heure, $arbitre, $resultat;
+    private $equipe1, $equipe2, $date, $heure, $arbitre, $resultat, $events = [];
 
     public function __construct($equipe1, $equipe2, $date, $heure, $arbitre, $resultat)
     {
@@ -66,6 +66,14 @@ class Match implements MatchDetails
 
 
     /**
+     * @return array
+     */
+    public function getEvents()
+    {
+        return $this->events;
+    }
+
+    /**
      * @param mixed $equipe1
      */
     public function setEquipe1($equipe1)
@@ -111,6 +119,19 @@ class Match implements MatchDetails
     public function setResultat($resultat)
     {
         $this->resultat = $resultat;
+    }
+
+
+    /**
+     * @param array $events
+     */
+    public function setEvents($events)
+    {
+        $this->events = $events;
+    }
+
+    public function addEvent(Event $event) {
+        $this->events[] = $event;
     }
 
     public function getDetails()
