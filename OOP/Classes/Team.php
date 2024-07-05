@@ -3,7 +3,7 @@
 namespace Classes;
 class Team
 {
-    private $nom, $coach;
+    private $nom, $coach, $joueur = [];
 
     public function __construct($nom, $coach)
     {
@@ -29,6 +29,14 @@ class Team
 
 
     /**
+     * @return array
+     */
+    public function getJoueur()
+    {
+        return $this->joueur;
+    }
+
+    /**
      * @param mixed $nom
      */
     public function setNom($nom)
@@ -44,10 +52,17 @@ class Team
         $this->coach = $coach;
     }
 
-    public function ajouterEquipe($nom, $entraineur)
+
+    /**
+     * @param array $joueur
+     */
+    public function setJoueur($joueur)
     {
-        $team = new Team($nom, $entraineur);
-        $this->teams[] = $team;
+        $this->joueur = $joueur;
+    }
+
+    public function addPlayer(Joueur $joueur) {
+        $this->joueur[] = $joueur;
     }
 
     public function getDetails()
