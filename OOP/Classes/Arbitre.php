@@ -1,6 +1,7 @@
 <?php
 
 namespace Classes;
+require_once 'Classes/Person.php';
 
 class Arbitre extends Person
 {
@@ -59,7 +60,7 @@ class Arbitre extends Person
 
     public function getDetails()
     {
-        echo "L'Arbitre: $this->nom, Adresse est: $this->adresse, Tel: $this->tel";
+        echo "L'Arbitre: $this->nom, Adresse est: $this->adresse, Tel: $this->tel \n";
     }
 
 }

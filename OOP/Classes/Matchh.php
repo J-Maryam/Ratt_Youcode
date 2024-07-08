@@ -1,19 +1,20 @@
 <?php
 
 namespace Classes;
+require_once 'Classes/MatchDetails.php';
+//require_once 'Classes/Team.php';
 
-class Match implements MatchDetails
+class Matchh implements MatchDetails
 {
-    private $equipe1, $equipe2, $date, $heure, $arbitre, $resultat, $events = [];
+    private $equipe1, $equipe2, $date, $heure, $arbitre, $resultat;
 
-    public function __construct($equipe1, $equipe2, $date, $heure, $arbitre, $resultat)
+    public function __construct($equipe1, $equipe2, $date, $heure, $arbitre)
     {
         $this->equipe1 = $equipe1;
         $this->equipe2 = $equipe2;
         $this->date = $date;
         $this->heure = $heure;
         $this->arbitre = $arbitre;
-        $this->resultat = $resultat;
     }
 
     /**
@@ -66,14 +67,6 @@ class Match implements MatchDetails
 
 
     /**
-     * @return array
-     */
-    public function getEvents()
-    {
-        return $this->events;
-    }
-
-    /**
      * @param mixed $equipe1
      */
     public function setEquipe1($equipe1)
@@ -121,23 +114,8 @@ class Match implements MatchDetails
         $this->resultat = $resultat;
     }
 
-
-    /**
-     * @param array $events
-     */
-    public function setEvents($events)
-    {
-        $this->events = $events;
+    public function getDetails() {
+        echo "Match: " . $this->equipe1->getNom() . " vs " . $this->equipe2->getNom() . ", Date: $this->date, Hour: $this->heure, Referee: " . $this->arbitre->getNom() . "\n";
     }
-
-    public function addEvent(Event $event) {
-        $this->events[] = $event;
-    }
-
-    public function getDetails()
-    {
-        echo "Equipe1: $this->equipe1, Equipe2: $this->equipe2, Date: $this->date, Heure: $this->heure, Arbitre: $this->arbitre, Resultat: $this->resultat";
-    }
-
 
 }

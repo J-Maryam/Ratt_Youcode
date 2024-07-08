@@ -78,10 +78,8 @@ class Event
         $this->match = $match;
     }
 
-
-    public function getDetails()
-    {
-        echo "Le type d'event: $this->type, Minute: $this->minute, Joueur: $this->joueur, Match: $this->match";
+    public function getDetails() {
+        echo "Événement: $this->type, Minute: $this->minute, Joueur: " . $this->joueur->getNom() . ", Match: " . $this->match->getEquipe1()->getNom() . " vs " . $this->match->getEquipe2()->getNom() . "\n";
     }
 
 }

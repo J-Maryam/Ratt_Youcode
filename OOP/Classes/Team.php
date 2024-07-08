@@ -1,9 +1,10 @@
 <?php
 
 namespace Classes;
-class Team
+
+class Team implements MatchDetails
 {
-    private $nom, $coach, $joueur = [];
+    private $nom, $coach;
 
     public function __construct($nom, $coach)
     {
@@ -27,15 +28,6 @@ class Team
         return $this->coach;
     }
 
-
-    /**
-     * @return array
-     */
-    public function getJoueur()
-    {
-        return $this->joueur;
-    }
-
     /**
      * @param mixed $nom
      */
@@ -52,21 +44,7 @@ class Team
         $this->coach = $coach;
     }
 
-
-    /**
-     * @param array $joueur
-     */
-    public function setJoueur($joueur)
-    {
-        $this->joueur = $joueur;
-    }
-
-    public function addPlayer(Joueur $joueur) {
-        $this->joueur[] = $joueur;
-    }
-
-    public function getDetails()
-    {
-        echo "L'equipe: $this->nom, le coach: $this->coach";
+    public function getDetails() {
+        echo "Équipe: $this->nom, Entraîneur: " . $this->coach->getNom() . "\n";
     }
 }

@@ -61,7 +61,7 @@ class Coach extends Person
 
     public function getDetails()
     {
-        echo "Le Coach: $this->nom, son adresse est: $this->adresse, son tel: $this->tel";
+        echo "Le Coach: $this->nom, son adresse est: $this->adresse, son tel: $this->tel \n";
     }
 
 }
