@@ -26,6 +26,7 @@ echo "Liste des équipes :\n";
 $team1->getDetails();
 $team2->getDetails();
 
+echo "Liste des joueurs :\n";
 //Ajout des joueuers dans le team
 $joueur1 = new Joueur("Player 1", "1990-01-01", "Attaquant", $team1);
 $joueur2 = new Joueur("Player 2", "1990-01-01", "Défenseur", $team2);
